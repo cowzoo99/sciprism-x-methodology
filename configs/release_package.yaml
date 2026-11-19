@@ -1,0 +1,50 @@
+schema_version: 1
+package_name: sciprism_x_methodology_release
+package_version: 1.0.0-review
+review_availability: immediate_on_request
+public_availability: upon_publication
+project_include:
+  - .gitignore
+  - README.md
+  - pyproject.toml
+  - requirements.lock.txt
+  - uv.lock
+  - configs
+  - data/manifests
+  - docs
+  - notebooks
+  - scripts
+  - src
+  - tests
+run_include:
+  - formal_run_receipt.json
+  - computed
+  - figures
+  - release
+  - comparison
+  - paper_reference
+excluded_names:
+  - .git
+  - .venv
+  - .pytest_cache
+  - .pytest_tmp
+  - .mypy_cache
+  - .ruff_cache
+  - .ipynb_checkpoints
+  - .runtime
+  - .coverage
+  - .env
+  - '.env.*'
+  - __pycache__
+  - htmlcov
+  - runs
+  - stages
+  - '*.log'
+  - '*.tmp'
+  - '*.partial'
+  - '*.pyc'
+  - '*.pyo'
+forbidden_identity_tokens: []
+allowed_absolute_paths:
+  - 'D:\SciPRISM-X-runs'
+  - 'D:\py\Python3'

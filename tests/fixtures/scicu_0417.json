@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "case_id": "SCICU-0417",
+  "fixture_scope": "published_worked_example_data_flow_acceptance_only",
+  "source": {
+    "document": "Appendix.docx",
+    "sha256": "822DDCC81F767FE5148786127C09750D50484540BB322B5CC164D9620943AEC2",
+    "locations": [
+      "Appendix E.5",
+      "Supplementary Table S4a",
+      "Supplementary Table S4b",
+      "Supplementary Table S4c"
+    ]
+  },
+  "paper_seeds": [42, 0, 1, 123, 1234],
+  "input": {
+    "benchmark": "SciCUEval",
+    "split": "held-out test",
+    "domain": "Physics; electromagnetism",
+    "competency": "Multi-source integration",
+    "response_model": "gpt-4o-2024-08-06",
+    "task": "A charged particle moves through crossed E perpendicular to B fields. Under what condition does the particle travel undeflected? Reference [Table 1]: E=4.0e3 V/m, B=0.05 T.",
+    "reference_derivation": "Force balance qE=qvB implies v=E/B; v=(4.0e3)/(0.05)=8.0e4 m/s.",
+    "benchmark_answer": "v=E/B=8.0e4 m/s",
+    "anonymized_response": "The particle is undeflected when the electric and magnetic forces balance, i.e., qE=qvB, which gives v=E/B. Substituting E=4.0e3 V/m and B=0.05 T yields v=8.0e4 m/s. The response reaches the correct endpoint but does not explicitly frame the Table 1 values as a multi-source synthesis and omits any ideal-condition or uncertainty caveat."
+  },
+  "published_observations": {
+    "endpoint_indicator": 0.93,
+    "pcs": 0.61,
+    "bsi": 0.28,
+    "regime": "BRITTLE",
+    "motifs": [
+      {"id": "M1", "label": "Symbolic transformation", "transport_mass": 0.72, "status": "MET"},
+      {"id": "M2", "label": "Unit/dimensional consistency", "transport_mass": 0.65, "status": "MET"},
+      {"id": "M3", "label": "Causal-mechanistic relation", "transport_mass": 0.44, "status": "MET"},
+      {"id": "M4", "label": "Evidence grounding; Table 1 values", "transport_mass": 0.52, "status": "MET"},
+      {"id": "M5", "label": "Multi-source integration; Table 1 synthesis", "transport_mass": 0.28, "status": "PARTIALLY_MET"},
+      {"id": "M6", "label": "Uncertainty qualification", "transport_mass": 0.00, "status": "UNMET"}
+    ],
+    "residual_order": [
+      "physical",
+      "logical",
+      "unit_dimensional",
+      "causal",
+      "modal_evidential",
+      "uncertainty"
+    ],
+    "residuals": [0.08, 0.06, 0.04, 0.11, 0.35, 0.42]
+  }
+}

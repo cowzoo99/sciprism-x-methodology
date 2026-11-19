@@ -1,0 +1,171 @@
+schema_version: 1
+dictionary_id: sciprism-x-motif-dictionary-v1
+fixed_before_final_test: true
+retention_criteria:
+  - reusable scientific reasoning operation rather than a dataset-specific topic
+  - anchored to observable task or response evidence
+  - supports deterministic checking or validation-fixed recognition
+exclusions:
+  - purely topical labels
+  - stylistic markers
+  - unobservable latent reasoning states
+aliases:
+  symbolic: symbolic_transformation
+  unit: unit_dimensional_consistency
+  dimensional: unit_dimensional_consistency
+  causal: causal_mechanistic_relation
+  mechanistic: causal_mechanistic_relation
+  evidence: evidence_binding
+  modality: modality_grounding
+  uncertainty: uncertainty_qualification
+families:
+  - family_id: symbolic_transformation
+    paper_label: Symbolic transformation
+    paper_source: Appendix Table S1
+    example_motifs: [equation manipulation, variable substitution]
+    input_roles: [equation, variable]
+    output_role: transformed expression
+    dependency_types: [symbolic dependence]
+    validator_interfaces: [algebraic consistency checker]
+    recognizer_prototypes:
+      - derive an equation by substituting variables
+      - transform a symbolic expression into an equivalent form
+    cue_rules:
+      - cue_id: symbolic_operator
+        pattern: '(?:=|≠|≈|≤|≥|∝|→|←)'
+        ignore_case: false
+        operational_source: existing motif parser
+      - cue_id: symbolic_lexeme
+        pattern: '\b(?:derive|calculate|compute|solve|substitute|equation)\b'
+        ignore_case: true
+        operational_source: existing motif parser
+  - family_id: unit_dimensional_consistency
+    paper_label: Unit dimensional consistency
+    paper_source: Appendix Table S1
+    example_motifs: [unit conversion, dimensional check]
+    input_roles: [quantity, unit]
+    output_role: compatible quantity
+    dependency_types: [constraint edge]
+    validator_interfaces: [unit parser, dimensional parser]
+    recognizer_prototypes:
+      - verify that a quantity has compatible physical dimensions
+      - convert a measured value between compatible units
+    cue_rules:
+      - cue_id: measured_quantity
+        pattern: '(?<![\w.])[+-]?(?:\d+(?:\.\d+)?|\.\d+)\s*(?:m/s(?:²|\^2)?|km/h|V/m|kg|Pa|Hz|mol|K|N|T|J|W|V|s|A|m)\b'
+        ignore_case: false
+        operational_source: existing motif parser
+      - cue_id: unit_lexeme
+        pattern: '\b(?:unit|dimension|dimensional|convert)\b'
+        ignore_case: true
+        operational_source: existing motif parser
+  - family_id: causal_mechanistic_relation
+    paper_label: Causal mechanistic relation
+    paper_source: Appendix Table S1
+    example_motifs: [causal direction, mechanism link]
+    input_roles: [event, variable, entity]
+    output_role: mechanism claim
+    dependency_types: [causal direction]
+    validator_interfaces: [causal schema, relation checker]
+    recognizer_prototypes:
+      - explain a scientific mechanism from cause to effect
+      - preserve the direction of a causal relation
+    cue_rules:
+      - cue_id: causal_lexeme
+        pattern: '\b(?:because|cause[sd]?|therefore|thus|lead[sd]? to|result[sd]? in|mechanism|balance[sd]?|oppose[sd]?|explain why)\b'
+        ignore_case: true
+        operational_source: existing motif parser
+  - family_id: evidence_binding
+    paper_label: Evidence binding
+    paper_source: Appendix Table S1
+    example_motifs: [claim evidence support]
+    input_roles: [claim, evidence item]
+    output_role: supported inference
+    dependency_types: [evidence support]
+    validator_interfaces: [entailment check, evidence-grounding check]
+    recognizer_prototypes:
+      - connect a scientific claim to the evidence that supports it
+      - justify an inference using an observation or measurement
+    cue_rules:
+      - cue_id: evidence_lexeme
+        pattern: '\b(?:according to|evidence|support(?:ed|s)?|report(?:ed|s)?|measured|based on|using)\b'
+        ignore_case: true
+        operational_source: existing motif parser
+  - family_id: modality_grounding
+    paper_label: Modality grounding
+    paper_source: Appendix Table S1
+    example_motifs: [text table grounding, text figure grounding, text graph grounding]
+    input_roles: [text claim, artifact anchor]
+    output_role: grounded statement
+    dependency_types: [cross-modal grounding]
+    validator_interfaces: [modality-anchor validator]
+    recognizer_prototypes:
+      - ground a text claim in a table figure graph image or record
+      - link an explanation to a non-text scientific artifact
+    cue_rules:
+      - cue_id: modality_anchor
+        pattern: '\b(?:table|figure|fig\.?|graph|image|record|passage)\b'
+        ignore_case: true
+        operational_source: existing motif parser
+  - family_id: uncertainty_qualification
+    paper_label: Uncertainty qualification
+    paper_source: Appendix Table S1
+    example_motifs: [confidence statement, caveat, limitation]
+    input_roles: [claim, evidence strength]
+    output_role: uncertainty statement
+    dependency_types: [qualifier edge]
+    validator_interfaces: [uncertainty-discipline checker]
+    recognizer_prototypes:
+      - qualify a claim with confidence uncertainty caveats or limitations
+      - align certainty with the strength of available evidence
+    cue_rules:
+      - cue_id: uncertainty_lexeme
+        pattern: '\b(?:approximately|uncertain|uncertainty|confidence|may|might|could|assuming|assume|ideal|caveat|limitation|applicable)\b'
+        ignore_case: true
+        operational_source: existing motif parser
+edge_rules:
+  - rule_id: task_order
+    applies_to: task
+    relation: prerequisite
+    direction: forward
+    condition: adjacent motif nodes in source-span order
+  - rule_id: response_order
+    applies_to: response
+    relation: temporal_succession
+    direction: forward
+    condition: adjacent motif nodes in source-span order
+  - rule_id: symbolic_shared_variable
+    applies_to: both
+    relation: symbolic_dependence
+    direction: forward
+    condition: adjacent nodes share a variable and either node is symbolic
+  - rule_id: causal_target
+    applies_to: both
+    relation: causal_direction
+    direction: forward
+    condition: target node is causal mechanistic
+  - rule_id: causal_justification
+    applies_to: both
+    relation: justificatory_support
+    direction: forward
+    condition: target node is causal mechanistic
+  - rule_id: evidence_source
+    applies_to: both
+    relation: evidence_support
+    direction: forward
+    condition: source node is evidence binding
+  - rule_id: modality_source
+    applies_to: both
+    relation: cross_modal_grounding
+    direction: forward
+    condition: source node is modality grounding
+  - rule_id: variable_reuse
+    applies_to: both
+    relation: variable_reuse
+    direction: bidirectional
+    condition: any ordered node pair shares at least one variable
+  - rule_id: local_to_global
+    applies_to: both
+    relation: local_to_global
+    direction: forward
+    condition: connect first and last nodes when graph contains more than two nodes

@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "repositories": {
+    "scicueval": {
+      "url": "https://github.com/HICAI-ZJU/SciCUEval",
+      "commit": "423484f99541beed575b28645661afed86dd4ff9"
+    },
+    "jape": {
+      "url": "https://github.com/nju-websoft/JAPE",
+      "commit": "73729a2df0547d79ad07c2758d27c9873930adec"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "scicueval-MatText-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MatText/Context-aware_Inference.json",
+      "sha256": "dfc3849b5e3e992791abd177f9c2ba6e85e0cc542992a0aa7bb4b62a5804ef25",
+      "destination": "raw/scicueval/MatText/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-MatText-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MatText/Information-absence_Detection.json",
+      "sha256": "2219f47dc3b813e50116962d20c29a1603b536b46ce936313ed007dd1bdbd3b5",
+      "destination": "raw/scicueval/MatText/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-MatText-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MatText/Information_Integration.json",
+      "sha256": "2fa7c998602d389721f628246a14f464634d5fcb68852f7cdc188cf33f55d557",
+      "destination": "raw/scicueval/MatText/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-MatText-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MatText/Relevant_Information_Identification.json",
+      "sha256": "2215f2b6aaabc001059e50f38a8fe21191dbc1372686105c95c87f51134e4c05",
+      "destination": "raw/scicueval/MatText/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-BioText-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/BioText/Context-aware_Inference.json",
+      "sha256": "5fe9901be7ee7b4417ceb952fa85273a29576c7d00ff2308e0053b4854e20e7e",
+      "destination": "raw/scicueval/BioText/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-BioText-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/BioText/Information-absence_Detection.json",
+      "sha256": "482ee227a47427baf7233e66340ad4482c045b01cdfc18ab85acebda75c9bc4a",
+      "destination": "raw/scicueval/BioText/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-BioText-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/BioText/Information_Integration.json",
+      "sha256": "ef396c261648017c39a9b92abcc4c13529bbf0db5145c141e7e5896d96d24931",
+      "destination": "raw/scicueval/BioText/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-BioText-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/BioText/Relevant_Information_Identification.json",
+      "sha256": "2f338c76204180745bad9ecf66601cc70d8608829c9494a5b8108fce28120f7b",
+      "destination": "raw/scicueval/BioText/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-MatTab-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MatTab/Context-aware_Inference.json",
+      "sha256": "0475822945223ddbcf764a9df69b4f7f7c0f6e3fe0d8b57acc66fb26e9054131",
+      "destination": "raw/scicueval/MatTab/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-MatTab-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MatTab/Information-absence_Detection.json",
+      "sha256": "239d60b1ff5d2656c837c4f26538f4056e2100394508091a960324923dfd532c",
+      "destination": "raw/scicueval/MatTab/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-MatTab-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MatTab/Information_Integration.json",
+      "sha256": "c5ff3d2f9d167602d1a3334ae85246fc706a3905600697ad181e5e388f98e50a",
+      "destination": "raw/scicueval/MatTab/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-MatTab-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MatTab/Relevant_Information_Identification.json",
+      "sha256": "a6b378127ed3053421f132394be6e747026f2d2f4d050dc7d2febf043312a0c5",
+      "destination": "raw/scicueval/MatTab/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-IaeaTab-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/IaeaTab/Context-aware_Inference.json",
+      "sha256": "3a1c5022dac701177a4da05500b04611cf7c4add5031b2347ca0172caff9550f",
+      "destination": "raw/scicueval/IaeaTab/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-IaeaTab-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/IaeaTab/Information-absence_Detection.json",
+      "sha256": "51a26295120deda6cae20bb9c23f089dac614719bd6b83d01fd6186947aa323b",
+      "destination": "raw/scicueval/IaeaTab/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-IaeaTab-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/IaeaTab/Information_Integration.json",
+      "sha256": "deb8e2868e96c606929566fee3df3947895acd81d1baf3ffe21a4b4e2da96a35",
+      "destination": "raw/scicueval/IaeaTab/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-IaeaTab-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/IaeaTab/Relevant_Information_Identification.json",
+      "sha256": "899327940bd8add0a800c44af441038256d1329d969b85e45cbdc5eee679d155",
+      "destination": "raw/scicueval/IaeaTab/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-ProtTab-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/ProtTab/Context-aware_Inference.json",
+      "sha256": "8237f004721699bf1a73e042265c60f86e009f50af3259d57b52582635931afa",
+      "destination": "raw/scicueval/ProtTab/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-ProtTab-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/ProtTab/Information-absence_Detection.json",
+      "sha256": "524e1b97242f42f93a14835b79d00f036e40effd56bc297238a4eb1dcc5c5f09",
+      "destination": "raw/scicueval/ProtTab/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-ProtTab-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/ProtTab/Information_Integration.json",
+      "sha256": "594151e5879d264dcf19aae64da3c827daeeb3d229de03e90f103c76d1a38e82",
+      "destination": "raw/scicueval/ProtTab/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-ProtTab-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/ProtTab/Relevant_Information_Identification.json",
+      "sha256": "75f38c0faa0283f2ee86304342255af4eebc5769cc684dc5b98d540d29208a7f",
+      "destination": "raw/scicueval/ProtTab/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-MolTab-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MolTab/Context-aware_Inference.json",
+      "sha256": "f7de1ae42df2cbde0af848d997c0e2f1e2792b1e7c21a454020e9a8876b3e75b",
+      "destination": "raw/scicueval/MolTab/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-MolTab-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MolTab/Information-absence_Detection.json",
+      "sha256": "07ffc63a7cfe2f930c8eccb68f6814828f808e3ca79a289b747614e2e24a295d",
+      "destination": "raw/scicueval/MolTab/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-MolTab-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MolTab/Information_Integration.json",
+      "sha256": "095087aed94324448f422895594a9acf926ea9c29fb5fcfa65de8a24a90b6e00",
+      "destination": "raw/scicueval/MolTab/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-MolTab-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/MolTab/Relevant_Information_Identification.json",
+      "sha256": "7cc478057dd76d88fb0c09ac883f1dd598a50632071f2e81ecd6be6344df4bce",
+      "destination": "raw/scicueval/MolTab/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-GoKG-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/GoKG/Context-aware_Inference.json",
+      "sha256": "306656615c4847e0e8bcac228b065b1b747e6e4a7256b0ad697f7b9dd307ea25",
+      "destination": "raw/scicueval/GoKG/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-GoKG-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/GoKG/Information-absence_Detection.json",
+      "sha256": "d40f80898e76d3c6d4b2c47f89e7c71a9d9148c20b026002e791896bdefddb06",
+      "destination": "raw/scicueval/GoKG/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-GoKG-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/GoKG/Information_Integration.json",
+      "sha256": "b7c4aa7ced7c87ac162e933afd2f41c8f2d7458cba8a69a828c1260c425a68a0",
+      "destination": "raw/scicueval/GoKG/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-GoKG-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/GoKG/Relevant_Information_Identification.json",
+      "sha256": "306a029eb9086cf519309f49947761ebe7d378985160197e0e9cc5440d33a7e0",
+      "destination": "raw/scicueval/GoKG/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-HipKG-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/HipKG/Context-aware_Inference.json",
+      "sha256": "e2697ae89c8fc39edda84838c00bb306b2fcdd6803515eeacd5741653e09a6a2",
+      "destination": "raw/scicueval/HipKG/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-HipKG-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/HipKG/Information-absence_Detection.json",
+      "sha256": "6018283d414c9b95c91c527ebdfded78db044d001e41a91f4ba8ca1d98989a9a",
+      "destination": "raw/scicueval/HipKG/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-HipKG-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/HipKG/Information_Integration.json",
+      "sha256": "b8d4291b7295742117d9d72aee67f53bca594b6afba2088e4c35c3b8876d0768",
+      "destination": "raw/scicueval/HipKG/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-HipKG-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/HipKG/Relevant_Information_Identification.json",
+      "sha256": "386ffcdc315416a36b39dfc1693744065a4c6791d6e3264cd0c58d4cf50ec0ef",
+      "destination": "raw/scicueval/HipKG/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-PhaKG-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/PhaKG/Context-aware_Inference.json",
+      "sha256": "2fede65f12d496ca5bb8e0b22143ddbd2c40bdf1c254f4a076ae02fd7cf86c68",
+      "destination": "raw/scicueval/PhaKG/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-PhaKG-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/PhaKG/Information-absence_Detection.json",
+      "sha256": "0c2947a5c2e68e0e4788b3b7753520a44c46d5551bf24a1a25e6520243f35676",
+      "destination": "raw/scicueval/PhaKG/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-PhaKG-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/PhaKG/Information_Integration.json",
+      "sha256": "de6edbf1f5fc824db15394d6220d8936f38e40d923255f40ab19d17c20bae4c3",
+      "destination": "raw/scicueval/PhaKG/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-PhaKG-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/PhaKG/Relevant_Information_Identification.json",
+      "sha256": "d735646a8337cb17798fcd96c03a60c3b3a32c9835c25c2b87f54f3a0b330886",
+      "destination": "raw/scicueval/PhaKG/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "scicueval-PriKG-Context-aware_Inference",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/PriKG/Context-aware_Inference.json",
+      "sha256": "b9532bd36eb4d00efeb03982e09420e12fc6c183fd4363cb83e396a14bc8d197",
+      "destination": "raw/scicueval/PriKG/Context-aware_Inference.json"
+    },
+    {
+      "source_id": "scicueval-PriKG-Information-absence_Detection",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/PriKG/Information-absence_Detection.json",
+      "sha256": "559ba419909e95adcb719406a12cb21379bcbb2f338ff3bbb97625c650745174",
+      "destination": "raw/scicueval/PriKG/Information-absence_Detection.json"
+    },
+    {
+      "source_id": "scicueval-PriKG-Information_Integration",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/PriKG/Information_Integration.json",
+      "sha256": "9c0bafb013746c0b0882db96cbe6060cefc820af0d6009edda63f977bded9651",
+      "destination": "raw/scicueval/PriKG/Information_Integration.json"
+    },
+    {
+      "source_id": "scicueval-PriKG-Relevant_Information_Identification",
+      "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/PriKG/Relevant_Information_Identification.json",
+      "sha256": "1f7be062584b4a9be09725a7450949b5b3e2f829c822f681093eea4ca7241f0d",
+      "destination": "raw/scicueval/PriKG/Relevant_Information_Identification.json"
+    },
+    {
+      "source_id": "dbp15k-jape-0_3",
+      "url": "https://raw.githubusercontent.com/nju-websoft/JAPE/73729a2df0547d79ad07c2758d27c9873930adec/data/dbp15k.tar.gz",
+      "sha256": "0ba26f55da9b49a67bdb8d9586c6b1882c9b673a7088e3091eb32feac017a2d7",
+      "destination": "raw/dbp15k/dbp15k.tar.gz"
+    }
+  ]
+}

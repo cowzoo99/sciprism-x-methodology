@@ -1,0 +1,143 @@
+{
+  "source_locations": {
+    "scicueval_and_dbp15k_main_results": "Manuscript.docx, DOCX table index 5 and 6",
+    "boundary_power": "Appendix.docx, DOCX table index 9",
+    "ablation_deltas": "Appendix.docx, DOCX table index 14",
+    "worked_case": "Appendix.docx, DOCX table index 18 to 20"
+  },
+  "fit_availability": {
+    "published_strata": [
+      "aggregate_by_regime"
+    ],
+    "unpublished_strata": [
+      "response_model",
+      "domain",
+      "competency",
+      "response_model_by_regime_by_domain_by_competency"
+    ],
+    "policy": "The fitter supports all four grouping keys, but this file contains only strata explicitly reported in the paper."
+  },
+  "response_generation": {
+    "model_ids": [
+      "gpt-4o-2024-08-06",
+      "claude-3.5-sonnet-20241022",
+      "gemini-1.5-pro-002",
+      "Llama-3.1-70B-Instruct",
+      "Qwen2.5-72B-Instruct",
+      "Mistral-Large-2411"
+    ],
+    "temperature": 0.0,
+    "maximum_output_tokens": 2048,
+    "responses_per_task": 3,
+    "evaluation_period": [
+      "2024-10",
+      "2025-01"
+    ]
+  },
+  "scicueval": {
+    "TSR": {
+      "iid": {"n": 600, "method_mean": 0.919, "method_spread": 0.013, "baseline": "Structure-aware matching", "baseline_mean": 0.912, "baseline_spread": 0.014, "delta": 0.007, "ci95": [0.005, 0.008], "adjusted_significance": "***"},
+      "motif_split": {"n": 600, "method_mean": 0.885, "method_spread": 0.019, "baseline": "Structure-aware matching", "baseline_mean": 0.879, "baseline_spread": 0.020, "delta": 0.007, "ci95": [0.004, 0.009], "adjusted_significance": "***"},
+      "domain_transfer": {"n": 600, "method_mean": 0.825, "method_spread": 0.020, "baseline": "Structure-aware matching", "baseline_mean": 0.822, "baseline_spread": 0.025, "delta": 0.003, "ci95": [0.000, 0.006], "adjusted_significance": "*"},
+      "boundary_stress": {"n": 2400, "method_mean": 0.774, "method_spread": 0.027, "baseline": "Structure-aware matching", "baseline_mean": 0.763, "baseline_spread": 0.027, "delta": 0.011, "ci95": [0.009, 0.013], "adjusted_significance": "***"}
+    },
+    "PCS": {
+      "iid": {"n": 600, "method_mean": 0.884, "method_spread": 0.017, "baseline": "Structure-aware matching", "baseline_mean": 0.855, "baseline_spread": 0.018, "delta": 0.029, "ci95": [0.027, 0.031], "adjusted_significance": "***"},
+      "motif_split": {"n": 600, "method_mean": 0.855, "method_spread": 0.019, "baseline": "Structure-aware matching", "baseline_mean": 0.828, "baseline_spread": 0.022, "delta": 0.027, "ci95": [0.024, 0.029], "adjusted_significance": "***"},
+      "domain_transfer": {"n": 600, "method_mean": 0.815, "method_spread": 0.025, "baseline": "Structure-aware matching", "baseline_mean": 0.774, "baseline_spread": 0.026, "delta": 0.041, "ci95": [0.038, 0.044], "adjusted_significance": "***"},
+      "boundary_stress": {"n": 2400, "method_mean": 0.754, "method_spread": 0.027, "baseline": "Structure-aware matching", "baseline_mean": 0.720, "baseline_spread": 0.030, "delta": 0.034, "ci95": [0.033, 0.036], "adjusted_significance": "***"}
+    },
+    "CCS": {
+      "iid": {"n": 600, "method_mean": 0.866, "method_spread": 0.016, "baseline": "Structure-aware matching", "baseline_mean": 0.841, "baseline_spread": 0.019, "delta": 0.025, "ci95": [0.023, 0.027], "adjusted_significance": "***"},
+      "motif_split": {"n": 600, "method_mean": 0.837, "method_spread": 0.019, "baseline": "Structure-aware matching", "baseline_mean": 0.814, "baseline_spread": 0.027, "delta": 0.023, "ci95": [0.020, 0.025], "adjusted_significance": "***"},
+      "domain_transfer": {"n": 600, "method_mean": 0.790, "method_spread": 0.027, "baseline": "Structure-aware matching", "baseline_mean": 0.749, "baseline_spread": 0.026, "delta": 0.041, "ci95": [0.038, 0.044], "adjusted_significance": "***"},
+      "boundary_stress": {"n": 2400, "method_mean": 0.718, "method_spread": 0.032, "baseline": "Structure-aware matching", "baseline_mean": 0.669, "baseline_spread": 0.037, "delta": 0.049, "ci95": [0.047, 0.051], "adjusted_significance": "***"}
+    },
+    "BSI": {
+      "direction": "lower_is_better",
+      "iid": {"n": 600, "method_mean": 0.037, "method_spread": 0.009, "baseline": "Structure-aware matching", "baseline_mean": 0.046, "baseline_spread": 0.010, "delta": 0.009, "ci95": [0.008, 0.010], "adjusted_significance": "***"},
+      "motif_split": {"n": 600, "method_mean": 0.049, "method_spread": 0.011, "baseline": "Structure-aware matching", "baseline_mean": 0.065, "baseline_spread": 0.014, "delta": 0.017, "ci95": [0.015, 0.018], "adjusted_significance": "***"},
+      "domain_transfer": {"n": 600, "method_mean": 0.100, "method_spread": 0.019, "baseline": "Structure-aware matching", "baseline_mean": 0.109, "baseline_spread": 0.021, "delta": 0.009, "ci95": [0.007, 0.011], "adjusted_significance": "***"},
+      "boundary_stress": {"n": 2400, "method_mean": 0.115, "method_spread": 0.025, "baseline": "Structure-aware matching", "baseline_mean": 0.159, "baseline_spread": 0.025, "delta": 0.044, "ci95": [0.043, 0.046], "adjusted_significance": "***"}
+    },
+    "UPDQ": {
+      "iid": {"n": 600, "method_mean": 0.849, "method_spread": 0.023, "baseline": "Structure-aware matching", "baseline_mean": 0.823, "baseline_spread": 0.027, "delta": 0.026, "ci95": [0.023, 0.029], "adjusted_significance": "***"},
+      "motif_split": {"n": 600, "method_mean": 0.812, "method_spread": 0.027, "baseline": "Structure-aware matching", "baseline_mean": 0.788, "baseline_spread": 0.032, "delta": 0.023, "ci95": [0.020, 0.026], "adjusted_significance": "***"},
+      "domain_transfer": {"n": 600, "method_mean": 0.737, "method_spread": 0.037, "baseline": "Structure-aware matching", "baseline_mean": 0.702, "baseline_spread": 0.039, "delta": 0.035, "ci95": [0.031, 0.039], "adjusted_significance": "***"},
+      "boundary_stress": {"n": 2400, "method_mean": 0.666, "method_spread": 0.043, "baseline": "Structure-aware matching", "baseline_mean": 0.626, "baseline_spread": 0.047, "delta": 0.040, "ci95": [0.037, 0.042], "adjusted_significance": "***"}
+    },
+    "SC": {
+      "iid": {"n": 600, "method_mean": 0.910, "method_spread": 0.013, "baseline": "Uncertainty-only", "baseline_mean": 0.902, "baseline_spread": 0.014, "delta": 0.009, "ci95": [0.007, 0.010], "adjusted_significance": "***"},
+      "motif_split": {"n": 600, "method_mean": 0.882, "method_spread": 0.018, "baseline": "Uncertainty-only", "baseline_mean": 0.875, "baseline_spread": 0.016, "delta": 0.007, "ci95": [0.005, 0.008], "adjusted_significance": "***"},
+      "domain_transfer": {"n": 600, "method_mean": 0.837, "method_spread": 0.023, "baseline": "Uncertainty-only", "baseline_mean": 0.798, "baseline_spread": 0.028, "delta": 0.040, "ci95": [0.037, 0.043], "adjusted_significance": "***"},
+      "boundary_stress": {"n": 2400, "method_mean": 0.777, "method_spread": 0.028, "baseline": "Structure-aware matching", "baseline_mean": 0.718, "baseline_spread": 0.026, "delta": 0.059, "ci95": [0.058, 0.061], "adjusted_significance": "***"}
+    }
+  },
+  "dbp15k": {
+    "SCS": {
+      "iid": {"n": 600, "method_mean": 0.888, "method_spread": 0.014, "baseline": "Sinkhorn OT", "baseline_mean": 0.772, "baseline_spread": 0.020, "delta": 0.117, "adjusted_significance": "***"},
+      "structure_split": {"n": 600, "method_mean": 0.848, "method_spread": 0.020, "baseline": "Sinkhorn OT", "baseline_mean": 0.721, "baseline_spread": 0.025, "delta": 0.127, "adjusted_significance": "***"},
+      "domain_transfer": {"n": 600, "method_mean": 0.787, "method_spread": 0.028, "baseline": "Sinkhorn OT", "baseline_mean": 0.650, "baseline_spread": 0.033, "delta": 0.137, "adjusted_significance": "***"},
+      "boundary_stress": {"n": 2400, "method_mean": 0.716, "method_spread": 0.035, "baseline": "Sinkhorn OT", "baseline_mean": 0.560, "baseline_spread": 0.041, "delta": 0.156, "adjusted_significance": "***"}
+    },
+    "TP": {
+      "iid": {"n": 600, "method_mean": 0.868, "method_spread": 0.017, "baseline": "Sinkhorn OT", "baseline_mean": 0.735, "baseline_spread": 0.022, "delta": 0.132, "adjusted_significance": "***"},
+      "structure_split": {"n": 600, "method_mean": 0.825, "method_spread": 0.024, "baseline": "Sinkhorn OT", "baseline_mean": 0.686, "baseline_spread": 0.027, "delta": 0.140, "adjusted_significance": "***"},
+      "domain_transfer": {"n": 600, "method_mean": 0.760, "method_spread": 0.032, "baseline": "Sinkhorn OT", "baseline_mean": 0.618, "baseline_spread": 0.035, "delta": 0.142, "adjusted_significance": "***"},
+      "boundary_stress": {"n": 2400, "method_mean": 0.684, "method_spread": 0.041, "baseline": "Sinkhorn OT", "baseline_mean": 0.527, "baseline_spread": 0.042, "delta": 0.157, "adjusted_significance": "***"}
+    }
+  },
+  "boundary_power": {
+    "scicueval": {
+      "PCS": {"observed": 0.034, "ci_half_width": 0.002, "minimum_detectable": 0.002},
+      "CCS": {"observed": 0.049, "ci_half_width": 0.002, "minimum_detectable": 0.003},
+      "BSI": {"observed": 0.044, "ci_half_width": 0.001, "minimum_detectable": 0.002},
+      "UPDQ": {"observed": 0.040, "ci_half_width": 0.003, "minimum_detectable": 0.004},
+      "SC": {"observed": 0.059, "ci_half_width": 0.002, "minimum_detectable": 0.002}
+    },
+    "dbp15k": {
+      "SCS": {"observed": 0.156, "ci_half_width": 0.002, "minimum_detectable": 0.003},
+      "TP": {"observed": 0.157, "ci_half_width": 0.002, "minimum_detectable": 0.003}
+    },
+    "n": 2400,
+    "all_powered": true
+  },
+  "ablation_deltas": {
+    "without_boundary_module": {"PCS": -0.000, "CCS": 0.000, "BSI": 0.136, "UPDQ": 0.000, "SC": 0.001, "SCS": -0.000, "TP": -0.000},
+    "without_hard_constraints": {"PCS": 0.050, "CCS": -0.001, "BSI": 0.062, "UPDQ": -0.000, "SC": -0.000, "SCS": 0.045, "TP": 0.068},
+    "without_motif_graph": {"PCS": 0.085, "CCS": 0.069, "BSI": 0.000, "UPDQ": -0.000, "SC": -0.000, "SCS": 0.085, "TP": 0.050},
+    "without_open_set_module": {"PCS": 0.000, "CCS": -0.000, "BSI": -0.000, "UPDQ": 0.134, "SC": 0.046, "SCS": -0.000, "TP": -0.001},
+    "without_residual_module": {"PCS": 0.000, "CCS": 0.060, "BSI": 0.001, "UPDQ": 0.000, "SC": 0.076, "SCS": -0.000, "TP": 0.000},
+    "without_soft_penalties": {"PCS": 0.031, "CCS": 0.029, "BSI": 0.031, "UPDQ": -0.001, "SC": 0.000, "SCS": 0.035, "TP": 0.029},
+    "without_state_field": {"PCS": 0.000, "CCS": 0.001, "BSI": 0.058, "UPDQ": 0.105, "SC": -0.000, "SCS": -0.001, "TP": -0.000},
+    "without_transport": {"PCS": 0.060, "CCS": 0.055, "BSI": -0.001, "UPDQ": -0.001, "SC": -0.000, "SCS": 0.108, "TP": 0.106}
+  },
+  "worked_case": {
+    "case_id": "SCICU-0417",
+    "domain": "Physics; electromagnetism",
+    "competency": "Multi-source integration",
+    "response_model": "gpt-4o-2024-08-06",
+    "endpoint_score": 0.93,
+    "pcs": 0.61,
+    "bsi": 0.28,
+    "residual_peak": {"value": 0.42, "channel": "uncertainty"},
+    "secondary_diagnostic_gap": {"value": 0.35, "channel": "modal/evidential"},
+    "regime": "BRITTLE",
+    "motifs": {
+      "M1": {"label": "Symbolic transformation", "transport_mass": 0.72, "status": "Met"},
+      "M2": {"label": "Unit/dimensional consistency", "transport_mass": 0.65, "status": "Met"},
+      "M3": {"label": "Causal-mechanistic relation", "transport_mass": 0.44, "status": "Met"},
+      "M4": {"label": "Evidence grounding; Table 1 values", "transport_mass": 0.52, "status": "Met"},
+      "M5": {"label": "Multi-source integration; Table 1 synthesis", "transport_mass": 0.28, "status": "Partially met"},
+      "M6": {"label": "Uncertainty qualification", "transport_mass": 0.00, "status": "Unmet"}
+    },
+    "residuals": {
+      "physical": 0.08,
+      "logical": 0.06,
+      "unit_dimensional": 0.04,
+      "causal": 0.11,
+      "modal_evidential": 0.35,
+      "uncertainty": 0.42
+    }
+  }
+}

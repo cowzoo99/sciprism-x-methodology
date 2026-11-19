@@ -1,0 +1,5 @@
+include:
+  - paper_explicit.yaml
+  - implementation_settings.yaml
+track: B
+published_targets: data/manifests/published_targets.json

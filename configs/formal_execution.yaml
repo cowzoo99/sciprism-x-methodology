@@ -1,0 +1,13 @@
+schema_version: 1
+split_fractions: [0.70, 0.15, 0.15]
+smoke_nonstress_cases: 6
+smoke_scicu_boundary_cases: 15
+smoke_dbp_boundary_cases: 36
+response_profile_entropy_weight: 0.01
+stable_pcs_quantile: 0.67
+stable_residual_quantile: 0.33
+invalid_pcs_quantile: 0.33
+invalid_residual_quantile: 0.67
+proxy_pass_threshold: 0.80
+proxy_fail_threshold: 0.80
+resume: true

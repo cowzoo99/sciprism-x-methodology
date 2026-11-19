@@ -1,0 +1,87 @@
+schema_version: 1
+registry_id: sciprism-x-validator-registry-v1
+fixed_before_final_test: true
+policy: rule_first_learned_fallback
+allowed_inputs:
+  - task_content
+  - parsed_response_trace
+  - admissibility_rules
+  - allowed_reference_context
+forbidden_inputs:
+  - generator_identity
+  - endpoint_correctness_labels
+  - final_test_outcomes
+  - aggregate_result_trends
+  - baseline_scores
+  - final_sciprism_x_scores
+  - boundary_labels
+  - open_set_categories
+low_certainty_policy: unresolved outputs are not treated as high-confidence channel violations
+validators:
+  - validator_id: deterministic_symbolic_equivalence
+    kind: deterministic
+    order: 1
+    applies_to: [symbolic_transformation]
+    decision_rule: parse explicit expressions and test algebraic equivalence under a two-second timeout
+    output_statuses: [PASS, FAIL, UNRESOLVED]
+    threshold_source: exact symbolic equivalence rule
+  - validator_id: deterministic_dimensional_compatibility
+    kind: deterministic
+    order: 2
+    applies_to: [unit_dimensional_consistency]
+    decision_rule: parse explicit quantities and require compatible physical dimensionality
+    output_statuses: [PASS, FAIL, UNRESOLVED]
+    threshold_source: exact unit and dimensional compatibility rule
+  - validator_id: deterministic_causal_direction
+    kind: deterministic
+    order: 3
+    applies_to: [causal_mechanistic_relation]
+    decision_rule: compare explicit causal direction and negation cues in task and response units
+    output_statuses: [PASS, FAIL, UNRESOLVED]
+    threshold_source: frozen causal cue rule
+  - validator_id: deterministic_evidence_binding
+    kind: deterministic
+    order: 4
+    applies_to: [evidence_binding]
+    decision_rule: require the response claim to preserve an allowed evidence anchor
+    output_statuses: [PASS, FAIL, UNRESOLVED]
+    threshold_source: frozen evidence-anchor rule
+  - validator_id: deterministic_modality_compatibility
+    kind: deterministic
+    order: 5
+    applies_to: [modality_grounding]
+    decision_rule: require compatible table figure graph image record or passage anchors
+    output_statuses: [PASS, FAIL, UNRESOLVED]
+    threshold_source: frozen modality-anchor rule
+  - validator_id: deterministic_uncertainty_qualification
+    kind: deterministic
+    order: 6
+    applies_to: [uncertainty_qualification]
+    decision_rule: require an uncertainty qualifier when the task motif explicitly requires one
+    output_statuses: [PASS, FAIL, UNRESOLVED]
+    threshold_source: frozen uncertainty-cue rule
+  - validator_id: deterministic_unsupported_claim
+    kind: deterministic
+    order: 7
+    applies_to: [evidence_binding, modality_grounding]
+    decision_rule: fail explicit unsupported-claim markers and otherwise defer weakly structured claims
+    output_statuses: [FAIL, UNRESOLVED]
+    threshold_source: frozen unsupported-claim cue rule
+  - validator_id: deterministic_boundary_condition
+    kind: deterministic
+    order: 8
+    applies_to: [causal_mechanistic_relation, unit_dimensional_consistency]
+    decision_rule: compare explicit boundary-condition values and applicability statements
+    output_statuses: [PASS, FAIL, UNRESOLVED]
+    threshold_source: frozen boundary-condition rule
+  - validator_id: frozen_entailment_fallback
+    kind: learned
+    order: 9
+    applies_to: [implicit_claim, weakly_structured_claim]
+    decision_rule: use frozen BART-MNLI only after all deterministic validators remain unresolved
+    output_statuses: [PASS, FAIL, UNRESOLVED, UNAVAILABLE_EXTERNAL]
+    threshold_source: validation-selected and frozen before final testing
+    pass_threshold: 0.8
+    fail_threshold: 0.8
+    model_id: facebook/bart-large-mnli
+    revision: d7645e127eaf1aefc7862fd59a17a5aa8558b8ce

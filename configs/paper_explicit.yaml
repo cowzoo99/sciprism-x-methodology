@@ -1,0 +1,40 @@
+generators:
+  model_ids:
+    - gpt-4o-2024-08-06
+    - claude-3.5-sonnet-20241022
+    - gemini-1.5-pro-002
+    - Llama-3.1-70B-Instruct
+    - Qwen2.5-72B-Instruct
+    - Mistral-Large-2411
+  temperature: 0.0
+  max_output_tokens: 2048
+  responses_per_task: 3
+  evaluation_period: ["2024-10", "2025-01"]
+judge:
+  model_id: gpt-4o-2024-08-06
+  dataset: scicueval
+  temperature: 0.0
+  top_p: 1.0
+  max_output_tokens: 512
+datasets:
+  scicueval:
+    role: primary
+  dbp15k:
+    role: auxiliary
+    language_pairs: [ZH-EN, JA-EN, FR-EN]
+    seed_fraction: 0.30
+    full_candidate_pool: true
+    candidate_pruning: false
+regimes:
+  names: [iid, motif_or_structure, domain_transfer, boundary_stress]
+  nonstress_cases: 600
+  boundary_stress_cases: 2400
+paper:
+  seeds: [42, 0, 1, 123, 1234]
+  hyperparameter_trials: 50
+  patience: 10
+  max_epochs: 100
+  bootstrap_resamples: 1000
+  confidence_level: 0.95
+  two_sided_tests: true
+  correction: holm_bonferroni

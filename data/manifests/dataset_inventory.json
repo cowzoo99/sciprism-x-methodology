@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "scicueval": {
+    "repository": "https://github.com/HICAI-ZJU/SciCUEval",
+    "commit": "423484f99541beed575b28645661afed86dd4ff9",
+    "file_count": 40,
+    "total_records": 11343,
+    "dataset_totals": {
+      "BioText": 968,
+      "GoKG": 1180,
+      "HipKG": 1165,
+      "IaeaTab": 1130,
+      "MatTab": 936,
+      "MatText": 940,
+      "MolTab": 1305,
+      "PhaKG": 1217,
+      "PriKG": 1250,
+      "ProtTab": 1252
+    },
+    "dataset_records": {
+      "BioText": {
+        "Context-aware_Inference": 317,
+        "Information-absence_Detection": 97,
+        "Information_Integration": 318,
+        "Relevant_Information_Identification": 236
+      },
+      "GoKG": {
+        "Context-aware_Inference": 180,
+        "Information-absence_Detection": 254,
+        "Information_Integration": 239,
+        "Relevant_Information_Identification": 507
+      },
+      "HipKG": {
+        "Context-aware_Inference": 140,
+        "Information-absence_Detection": 236,
+        "Information_Integration": 319,
+        "Relevant_Information_Identification": 470
+      },
+      "IaeaTab": {
+        "Context-aware_Inference": 180,
+        "Information-absence_Detection": 222,
+        "Information_Integration": 286,
+        "Relevant_Information_Identification": 442
+      },
+      "MatTab": {
+        "Context-aware_Inference": 200,
+        "Information-absence_Detection": 150,
+        "Information_Integration": 287,
+        "Relevant_Information_Identification": 299
+      },
+      "MatText": {
+        "Context-aware_Inference": 356,
+        "Information-absence_Detection": 146,
+        "Information_Integration": 222,
+        "Relevant_Information_Identification": 216
+      },
+      "MolTab": {
+        "Context-aware_Inference": 180,
+        "Information-absence_Detection": 259,
+        "Information_Integration": 350,
+        "Relevant_Information_Identification": 516
+      },
+      "PhaKG": {
+        "Context-aware_Inference": 168,
+        "Information-absence_Detection": 256,
+        "Information_Integration": 281,
+        "Relevant_Information_Identification": 512
+      },
+      "PriKG": {
+        "Context-aware_Inference": 253,
+        "Information-absence_Detection": 205,
+        "Information_Integration": 382,
+        "Relevant_Information_Identification": 410
+      },
+      "ProtTab": {
+        "Context-aware_Inference": 180,
+        "Information-absence_Detection": 249,
+        "Information_Integration": 327,
+        "Relevant_Information_Identification": 496
+      }
+    },
+    "required_fields": [
+      "question",
+      "answer",
+      "Context",
+      "Correct Context",
+      "id"
+    ],
+    "optional_fields_observed": [
+      "options",
+      "paper",
+      "Source",
+      "URL",
+      "database type",
+      "domain",
+      "Correct triplets",
+      "path"
+    ]
+  },
+  "dbp15k": {
+    "repository": "https://github.com/nju-websoft/JAPE",
+    "commit": "73729a2df0547d79ad07c2758d27c9873930adec",
+    "archive_sha256": "0ba26f55da9b49a67bdb8d9586c6b1882c9b673a7088e3091eb32feac017a2d7",
+    "archive_entries": 338,
+    "seed_fraction": 0.3,
+    "language_pairs": {
+      "ZH-EN": {
+        "source_entities": 19388,
+        "target_entities": 19572,
+        "supervised_pairs": 4500,
+        "reference_pairs": 10500,
+        "source_relations": 1701,
+        "target_relations": 1323,
+        "source_triples": 70414,
+        "target_triples": 95142
+      },
+      "JA-EN": {
+        "source_entities": 19814,
+        "target_entities": 19780,
+        "supervised_pairs": 4500,
+        "reference_pairs": 10500,
+        "source_relations": 1299,
+        "target_relations": 1153,
+        "source_triples": 77214,
+        "target_triples": 93484
+      },
+      "FR-EN": {
+        "source_entities": 19661,
+        "target_entities": 19993,
+        "supervised_pairs": 4500,
+        "reference_pairs": 10500,
+        "source_relations": 903,
+        "target_relations": 1208,
+        "source_triples": 105998,
+        "target_triples": 115722
+      }
+    }
+  }
+}
